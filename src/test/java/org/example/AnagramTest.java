@@ -12,7 +12,7 @@ import static org.junit.jupiter.api.Assertions.*;
 public class AnagramTest {
     private Anagram anag;
     @BeforeEach
-    void SetUp() {
+    void ang() {
         anag= new Anagram();
     }
 
