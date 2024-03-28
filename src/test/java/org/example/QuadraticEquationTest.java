@@ -1,10 +1,8 @@
 package org.example;
 import org.junit.jupiter.api.Test;
-import static org.junit.jupiter.api.Assertions.*;
+
 
 import org.junit.jupiter.api.BeforeEach;
-
-
 import static org.junit.jupiter.api.Assertions.*;
 
 public class QuadraticEquationTest {
@@ -17,7 +15,7 @@ public class QuadraticEquationTest {
     }
 
     @Test
-    void testUsingAEqualsZero() {
+    void testEquals0() {
         double a = 0;
         double b = 2;
         double c = 3;
@@ -25,7 +23,24 @@ public class QuadraticEquationTest {
     }
 
     @Test
-    void testUsingDeltaLessThanZero() {
+    void testUsingDelta_super_0() {
+        double a = 1;
+        double b = 4;
+        double c = 3;
+        double[] roots = QuadraticEquation.solve(a, b, c);
+        assertArrayEquals(new double[]{(-b + Math.sqrt(b * b - 4 * a * c)) / (2 * a), (-b - Math.sqrt(b * b - 4 * a * c)) / (2 * a)}, roots);
+    }
+
+    @Test
+    void testUsingDelta_Egale0() {
+        double a = 1;
+        double b = 2;
+        double c = 1;
+        double[] roots = QuadraticEquation.solve(a, b, c);
+        assertArrayEquals(new double[]{-b / (2 * a)}, roots);
+    }
+    @Test
+    void testUsingDelta_moins0() {
         double a = 1;
         double b = 1;
         double c = 1;
@@ -33,23 +48,7 @@ public class QuadraticEquationTest {
         assertNull(roots);
     }
 
-    @Test
-    void testUsingDeltaEqualsZero() {
-        double a = 1;
-        double b = 2;
-        double c = 1;
-        double[] roots = QuadraticEquation.solve(a, b, c);
-        assertArrayEquals(new double[]{-b / (2 * a)}, roots);
-    }
 
-    @Test
-    void testUsingDeltaGreaterThanZero() {
-        double a = 1;
-        double b = 4;
-        double c = 3;
-        double[] roots = QuadraticEquation.solve(a, b, c);
-        assertArrayEquals(new double[]{(-b + Math.sqrt(b * b - 4 * a * c)) / (2 * a), (-b - Math.sqrt(b * b - 4 * a * c)) / (2 * a)}, roots);
-    }
 
 
 }
