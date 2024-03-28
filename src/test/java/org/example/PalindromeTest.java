@@ -7,31 +7,26 @@ import org.junit.jupiter.api.Test;
 public class PalindromeTest {
     private Palindrome palindrome;
     @BeforeEach
-    void SetUp() {
+    void palind() {
         palindrome = new Palindrome();
     }
-
     @Test
-    public void testIsPalindrome() {
+    public void test_est_Palindrome() {
         assertEquals(true, palindrome.isPalindrome("radar"));
     }
 
-
     @Test
-    public void testIsPalindromeWithOneWord() {
+    public void test_est_Palindrom2() {
         assertEquals(true, palindrome.isPalindrome("elle"));
     }
 
-
     @Test
-    public void testIsPalindromeWithNonPalindromeWord() {
+    public void testIsnotpalindrome() {
 
         assertEquals(false, palindrome.isPalindrome("haithem"));
     }
-
-
     @Test
-    void isPalindromeOriginal_withNullString_shouldThrowNullPointerException() {
+    void isPalindromeOriginal_ilfaut_ThrowNullPointerException() {
         assertThrows(NullPointerException.class, () -> Palindrome.isPalindromeOriginal(null));
     }
 
