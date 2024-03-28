@@ -1,33 +1,19 @@
 package org.example;
 import org.junit.jupiter.api.Test;
 import java.lang.reflect.Array;
-import org.junit.jupiter.api.BeforeEach;
 
 import org.junit.jupiter.api.Assertions;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
-
-
-
-
-
 public class BinarySearchTest {
 
-    private BinarySearch binarySearch;
-    @BeforeEach
-    void SetUp() {
-        binarySearch = new BinarySearch();
-    }
-
-
-
     @Test
-    void testArrayIsNULL() {
+    void testArray_est_NULL() {
         Array a = null;
         assertThrows(NullPointerException.class, () -> BinarySearch.binarySearch(null, 1));
     }
     @Test
-    void testElementNotInTheArray() {
+    void testElement_not_dans_Array() {
         int[] array = {10, 20, 30, 40, 50,100};
         int element = 500;
         int index = BinarySearch.binarySearch(array, element);
@@ -49,7 +35,7 @@ public class BinarySearchTest {
     }*/
 
     @Test
-    void testMidollfArrayGreaterThanElement() {
+    void testMidoll_ArrayGrand_off_Element() {
         int[] array = {10, 20, 30, 40, 50,100};
         int element = 20;
         int index = BinarySearch.binarySearch(array, element);
