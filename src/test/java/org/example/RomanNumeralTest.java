@@ -9,13 +9,13 @@ public class RomanNumeralTest {
 
 
     @Test
-    void testRomanNumeralGrandoff3999() {
+    void testRomanNumeralGrand_off_3999() {
         assertThrows(IllegalArgumentException.class, () -> RomanNumeral.toRoman(4000));
     }
 
     @Test
-    void testRomanNumerallessoff0() {
-        assertThrows(IllegalArgumentException.class, () -> RomanNumeral.toRoman(-505));
+    void testRomanNumeralless_off_0() {
+        assertThrows(IllegalArgumentException.class, () -> RomanNumeral.toRoman(-19));
     }
     @Test
     void testRomanNum8() {

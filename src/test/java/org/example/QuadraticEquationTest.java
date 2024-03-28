@@ -45,7 +45,7 @@ public class QuadraticEquationTest {
         double b = 1;
         double c = 1;
         double[] roots = QuadraticEquation.solve(a, b, c);
-        assertNull(roots);
+          assertNull(roots);
     }
 
 
