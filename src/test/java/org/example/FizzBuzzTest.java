@@ -7,7 +7,7 @@ import org.junit.jupiter.api.BeforeEach;
 public class FizzBuzzTest {
     private FizzBuzz fizzBuzzTest;
     @BeforeEach
-    void SetUp() {
+    void Fizz() {
         fizzBuzzTest = new FizzBuzz();
     }
     @Test
