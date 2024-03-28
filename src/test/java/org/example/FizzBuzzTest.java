@@ -7,12 +7,10 @@ import org.junit.jupiter.api.BeforeEach;
 
 
 
-import static org.junit.jupiter.api.Assertions.*;
+
 
 public class FizzBuzzTest {
     private FizzBuzz fizzBuzzTest;
-
-
 
 
 
@@ -22,8 +20,9 @@ public class FizzBuzzTest {
     }
     @Test
     public void testMultiple3() {
-        assertEquals("Fizz", fizzBuzzTest.fizzBuzz(15));
+        assertEquals("Fizz", fizzBuzzTest.fizzBuzz(6));
     }
+
 
 
 
@@ -46,7 +45,7 @@ public class FizzBuzzTest {
 
     @Test
     public void testNegative() {
-        assertThrows(IllegalArgumentException.class, () -> fizzBuzzTest.fizzBuzz(-2));
+        assertThrows(IllegalArgumentException.class, () -> fizzBuzzTest.fizzBuzz(-19));
     }
 
 }

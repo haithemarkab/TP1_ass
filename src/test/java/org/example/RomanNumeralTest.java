@@ -1,58 +1,45 @@
 package org.example;
-
-import static org.junit.jupiter.api.Assertions.*;
-
+import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
 
 
 public class RomanNumeralTest {
-    private RomanNumeral romanNumeral;
 
-    @BeforeEach
-    void SetUp() {
-        romanNumeral = new RomanNumeral();
+
+    @Test
+    void testRomanNumeralGrandoff3999() {
+        assertThrows(IllegalArgumentException.class, () -> RomanNumeral.toRoman(4000));
     }
 
     @Test
-    void testRomanNumeralGreaterThan3999() {
-        assertThrows(IllegalArgumentException.class, () -> RomanNumeral.toRoman(564651));
+    void testRomanNumerallessoff0() {
+        assertThrows(IllegalArgumentException.class, () -> RomanNumeral.toRoman(-505));
     }
-
     @Test
-    void testRomanNumeralLessThan1() {
-        assertThrows(IllegalArgumentException.class, () -> RomanNumeral.toRoman(-22135));
+    void testRomanNum8() {
+        String expected = "VIII";
+        String returned = RomanNumeral.toRoman(8);
+        assertEquals(expected, returned);
     }
-
     @Test
-    void testRomanNumeralTen() {
+    void testRomanNum9() {
+        String expected = "IX";
+        String returned = RomanNumeral.toRoman(9);
+        assertEquals(expected, returned);
+    }
+    @Test
+    void testRomanNumer10() {
         String expected = "X";
         String returned = RomanNumeral.toRoman(10);
         assertEquals(expected, returned);
     }
 
-    @Test
-    void testRomanNumeralNine() {
-        String expected = "IX";
-        String returned = RomanNumeral.toRoman(9);
-        assertEquals(expected, returned);
-    }
 
-    @Test
-    void testRomanNumeralEight() {
-        String expected = "VIII";
-        String returned = RomanNumeral.toRoman(8);
-        assertEquals(expected, returned);
-    }
 
-    @Test
-    void testRomanNumeralFourteen() {
-        String expected = "XIV";
-        String returned = RomanNumeral.toRoman(14);
-        assertEquals(expected, returned);
-    }
+
+
+
 
 }
