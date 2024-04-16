@@ -13,7 +13,7 @@ public class BinarySearchTest {
         assertThrows(NullPointerException.class, () -> BinarySearch.binarySearch(null, 1));
     }
     @Test
-    void testElement_not_dans_Array() {
+    void test_element_not_dans_Array() {
         int[] array = {10, 20, 30, 40, 50,100};
         int element = 500;
         int index = BinarySearch.binarySearch(array, element);
@@ -35,7 +35,7 @@ public class BinarySearchTest {
     }*/
 
     @Test
-    void testMidoll_ArrayGrand_off_Element() {
+    void test_midoll_Arraygrand_off_element() {
         int[] array = {10, 20, 30, 40, 50,100};
         int element = 20;
         int index = BinarySearch.binarySearch(array, element);

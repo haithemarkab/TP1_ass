@@ -21,12 +21,12 @@ public class PalindromeTest {
     }
 
     @Test
-    public void testIsnotpalindrome() {
+    public void test_est_notpalindrome() {
 
         assertEquals(false, palindrome.isPalindrome("haithem"));
     }
     @Test
-    void isPalindromeOriginal_ilfaut_ThrowNullPointerException() {
+    void Palindrome_Original_ilfaut_Throw_Null_Exception() {
         assertThrows(NullPointerException.class, () -> Palindrome.isPalindromeOriginal(null));
     }
 

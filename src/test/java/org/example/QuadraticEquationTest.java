@@ -1,7 +1,5 @@
 package org.example;
 import org.junit.jupiter.api.Test;
-
-
 import org.junit.jupiter.api.BeforeEach;
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -11,11 +9,12 @@ public class QuadraticEquationTest {
 
     @BeforeEach
     void SetUp() {
+
         quadraticEquation = new QuadraticEquation();
     }
 
     @Test
-    void testEquals0() {
+    void test_equals_0() {
         double a = 0;
         double b = 2;
         double c = 3;
@@ -23,7 +22,7 @@ public class QuadraticEquationTest {
     }
 
     @Test
-    void testUsingDelta_super_0() {
+    void test_using_Delta_super_0() {
         double a = 1;
         double b = 4;
         double c = 3;
@@ -32,7 +31,7 @@ public class QuadraticEquationTest {
     }
 
     @Test
-    void testUsingDelta_Egale0() {
+    void test_using_Delta_Egale_0() {
         double a = 1;
         double b = 2;
         double c = 1;
@@ -40,7 +39,7 @@ public class QuadraticEquationTest {
         assertArrayEquals(new double[]{-b / (2 * a)}, roots);
     }
     @Test
-    void testUsingDelta_moins0() {
+    void test_using_Delta_moins_0() {
         double a = 1;
         double b = 1;
         double c = 1;
