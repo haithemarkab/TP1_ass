@@ -19,19 +19,20 @@ public class AnagramTest {
 
 
     @Test
-    void testFirst_est_NULL() {
+    void test_first_est_NULL() {
+
         assertThrows(NullPointerException.class, () -> Anagram.isAnagram(null, "ESS"));
     }
     @Test
-    void testSecond_est_NULL() {
+    void test_second_est_NULL() {
         assertThrows(NullPointerException.class, () -> Anagram.isAnagram("haithem", null));
     }
     @Test
-    public void testNot_meme_Length() {
+    public void test_not_meme_Length() {
         assertFalse(anag.isAnagram("haithem", "math"));
     }
     @Test
-    public void test_est_Anagram() {
+    public void test_est_anagram() {
         assertEquals(true, anag.isAnagram("mohamed", "mohamed"));
     }
 
@@ -39,6 +40,13 @@ public class AnagramTest {
     void test_les_deux_NULL() {
         assertThrows(NullPointerException.class, () -> Anagram.isAnagram(null, null));
     }
+
+
+/*
+    @Test
+    void test_les_deux_NULL() {l, null));
+    }
+    */
 
 
     @Test
